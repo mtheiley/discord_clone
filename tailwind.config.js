@@ -10,6 +10,7 @@ module.exports = {
       btrim: '#1e2124',
       baccent: '#7289da',
       baccent2: '#383a40',
+      btrim2: '#444444',
       tprimary: '#ffffff',
       tsecondary: '#8c929b',
       taccent: '#8c8f93',

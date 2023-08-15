@@ -1,0 +1,4 @@
+<div *ngIf="largePicture; else smallPicture" class="h-[40px] w-[40px] rounded-full bg-yellow"></div>
+<ng-template #smallPicture>
+    <div class="h-[35px] w-[35px] rounded-full bg-yellow"></div>
+</ng-template>

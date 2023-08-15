@@ -1,26 +1,15 @@
 <div class="flex flex-col h-full justify-between bg-bprimary text-tprimary">
+  <app-main-panel-title-bar></app-main-panel-title-bar>
   <div>
-    <div class="h-12 flex flex-row justify-between">
-      <div class="m-3"># general</div>
-      <div class="m-3 flex flex-row gap-3">
-        <div class="">A</div>
-        <div class="">B</div>
-        <div class="">C</div>
-        <div class="mr-3">D</div>
-      </div>
+    <div class="flex flex-row items-center">
+        <div class="h-[1px] w-full bg-btrim2"></div>
+        <div class="text-xs w-[250px] text-taccent text-center">15 August 2023</div>
+        <div class="h-[1px] w-full bg-btrim2"></div>
     </div>
-    <div class="h-[1px] bg-btrim"></div>
-  </div>
-  <div class="m-6 h-12 flex flex-row bg-baccent2 text-taccent rounded-lg items-center justify-between">
-    <div class="flex flex-row gap-6 ml-6">
-      <div>+</div>
-      <div>Message #general</div>
-    </div>
-    <div class="flex flex-row gap-3 mr-6">
-      <div>A</div>
-      <div>B</div>
-      <div>C</div>
-      <div>D</div>
-    </div>
+    <app-message [user]="'mtheiley'" [time]="'Today at 21:03'" [message]="'Hello Kelly'"></app-message>
+    <app-message [user]="'kellyzh'" [time]="'Today at 21:03'" [message]="'Hi Matt!'"></app-message>
+    <app-message [user]="'mtheily'" [time]="'Today at 22:02'" [message]="'I can now add messages to my discord clone. They even allow for word wrapping so that
+    they don\'t overflow out of the page. How cool is that?????'"></app-message>
+    <app-message-bar></app-message-bar>
   </div>
 </div>

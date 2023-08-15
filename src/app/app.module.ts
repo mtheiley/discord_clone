@@ -9,6 +9,10 @@ import { ChannelComponent } from './channel/channel.component';
 import { ChannelCategoryComponent } from './channel-category/channel-category.component';
 import { ChannelBarComponent } from './channel-bar/channel-bar.component';
 import { MainPanelComponent } from './main-panel/main-panel.component';
+import { MessageBarComponent } from './message-bar/message-bar.component';
+import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
+import { MainPanelTitleBarComponent } from './main-panel-title-bar/main-panel-title-bar.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { MainPanelComponent } from './main-panel/main-panel.component';
     ChannelComponent,
     ChannelCategoryComponent,
     ChannelBarComponent,
-    MainPanelComponent
+    MainPanelComponent,
+    MessageBarComponent,
+    ProfilePictureComponent,
+    MainPanelTitleBarComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
