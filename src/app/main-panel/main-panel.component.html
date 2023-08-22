@@ -1,7 +1,7 @@
-<div class="flex flex-col h-full max-h-screen justify-between bg-bprimary text-tprimary">
+<div class="flex flex-col h-full max-h-[100vh] justify-between bg-bprimary text-tprimary">
   <app-main-panel-title-bar></app-main-panel-title-bar>
-  <div class="flex flex-col max-h-screen">
-    <div class="basis-3/4 overflow-auto">
+  <div class="flex flex-col max-h-[90vh]">
+    <div class="overflow-auto">
         <div class="flex flex-row items-center">
             <div class="h-[1px] w-full bg-btrim2"></div>
             <div class="text-xs w-[250px] text-taccent text-center">15 August 2023</div>
@@ -9,6 +9,6 @@
         </div>
         <app-message *ngFor="let messageData of messageList" [user]="messageData.user" [time]="messageData.time" [message]="messageData.message"></app-message>
     </div>
-    <app-message-bar class="basis-1/4"></app-message-bar>
+    <app-message-bar class=""></app-message-bar>
   </div>
 </div>

@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-panel.component.css']
 })
 export class MainPanelComponent {
+  //messageList: {user: String, time: String, message: String}[] = [{user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"}]
+
   messageList: {user: String, time: String, message: String}[] = [
     {user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"},
     {user: "kellyzh", time: "Today at 21:10", message: "Hi Matt!"},
