@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ICategory } from '../interfaces/app-category-interface';
 
 @Component({
   selector: 'app-channel-category',
@@ -6,5 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./channel-category.component.css']
 })
 export class ChannelCategoryComponent {
-  @Input() channelName: String = "UNKNOWN CATEGORY";
+  @Input() category: ICategory = {
+    id: 0,
+    name: "@CategoryName@",
+    channelList: []
+  };
 }

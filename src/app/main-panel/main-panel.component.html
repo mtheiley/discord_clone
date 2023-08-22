@@ -1,5 +1,5 @@
 <div class="flex flex-col h-full max-h-[100vh] justify-between bg-bprimary text-tprimary">
-  <app-main-panel-title-bar></app-main-panel-title-bar>
+  <app-main-panel-title-bar [channelName]="currentChannel.name"></app-main-panel-title-bar>
   <div class="flex flex-col max-h-[90vh]">
     <div class="overflow-auto">
         <div class="flex flex-row items-center">
@@ -7,7 +7,7 @@
             <div class="text-xs w-[250px] text-taccent text-center">15 August 2023</div>
             <div class="h-[1px] w-full bg-btrim2"></div>
         </div>
-        <app-message *ngFor="let messageData of messageList" [user]="messageData.user" [time]="messageData.time" [message]="messageData.message"></app-message>
+        <app-message *ngFor="let message of currentChannel.messageList" [user]="message.user.name" [time]="message.time" [content]="message.content"></app-message>
     </div>
     <app-message-bar class=""></app-message-bar>
   </div>

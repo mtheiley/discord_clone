@@ -5,7 +5,7 @@
         <div class="mr-6">></div>
       </div>
       <div class="h-[1px] w-full bg-btrim"></div>
-      <app-channel-category *ngFor="let category of currentServer.categoryList" [channelName]="category.name"></app-channel-category>
+      <app-channel-category *ngFor="let category of currentServer.categoryList" [category]="category"></app-channel-category>
     </div>
     <div class="flex flex-row w-full justify-between bg-btrim">
       <div class="flex flex-row">

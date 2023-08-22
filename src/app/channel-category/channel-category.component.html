@@ -1,8 +1,8 @@
 <div class="mt-3 flex flex-row gap-1 w-full text-xs font-bold">
-    <div class="ml-1">></div>
-    <div class="flex flex-row w-full justify-between">
-      <div class="">{{channelName}}</div>
-      <div class="mr-3">+</div>
-    </div>
+  <div class="ml-1">></div>
+  <div class="flex flex-row w-full justify-between">
+    <div class="">{{category.name}}</div>
+    <div class="mr-3">+</div>
   </div>
-<app-channel></app-channel>
+</div>
+<app-channel *ngFor="let channel of category.channelList" [channel]="channel"></app-channel>

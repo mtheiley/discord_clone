@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent {
-  @Input() message: String = "empty message";
+  @Input() content: String = "empty message";
   @Input() time: String = "@DATE@";
   @Input() user: String = "@USER@";
 }

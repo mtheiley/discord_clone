@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ChannelStateService } from '../services/channel-state.service';
+import { IChannel } from '../interfaces/app-channel-interface';
 
 @Component({
   selector: 'app-main-panel',
@@ -6,23 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-panel.component.css']
 })
 export class MainPanelComponent {
-  //messageList: {user: String, time: String, message: String}[] = [{user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"}]
 
-  messageList: {user: String, time: String, message: String}[] = [
-    {user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"},
-    {user: "kellyzh", time: "Today at 21:10", message: "Hi Matt!"},
-    {user: "mtheiley", time: "Today at 21:12", message: "I can now add messages to my discord clone. They even allow for word wrapping so that\
-    they don't overflow out of the page. How cool is that?????"},
-    {user: "kellyzh", time: "Today at 21:24", message: "That is pretty cool, have to admit"},
-    {user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"},
-    {user: "kellyzh", time: "Today at 21:10", message: "Hi Matt!"},
-    {user: "mtheiley", time: "Today at 21:12", message: "I can now add messages to my discord clone. They even allow for word wrapping so that\
-    they don't overflow out of the page. How cool is that?????"},
-    {user: "kellyzh", time: "Today at 21:24", message: "That is pretty cool, have to admit"},
-    {user: "mtheiley", time: "Today at 21:03", message: "Hello Kelly"},
-    {user: "kellyzh", time: "Today at 21:10", message: "Hi Matt!"},
-    {user: "mtheiley", time: "Today at 21:12", message: "I can now add messages to my discord clone. They even allow for word wrapping so that\
-    they don't overflow out of the page. How cool is that?????"},
-    {user: "kellyzh", time: "Today at 21:24", message: "That is pretty cool, have to admit"},
-  ]
+  currentChannel: IChannel = {
+    id: 0,
+    name: "@ChannelName@",
+    messageList: [] 
+  }
+
+  constructor(private channelState: ChannelStateService) {
+
+  }
+
+  ngOnInit() {
+    this.channelState.currentMessage.subscribe(message => this.currentChannel = message);
+  }
 }
