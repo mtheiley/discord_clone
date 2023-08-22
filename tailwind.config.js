@@ -18,6 +18,9 @@ module.exports = {
       green: '#57F287',
       yellow: '#FEE75C'
     },
+    fontFamily: {
+      discord: ['Uni Sans Regular']
+    },
     extend: {},
   },
   plugins: [],

@@ -1,15 +1,14 @@
-<div class="flex flex-col h-full justify-between bg-bprimary text-tprimary">
+<div class="flex flex-col h-full max-h-screen justify-between bg-bprimary text-tprimary">
   <app-main-panel-title-bar></app-main-panel-title-bar>
-  <div>
-    <div class="flex flex-row items-center">
-        <div class="h-[1px] w-full bg-btrim2"></div>
-        <div class="text-xs w-[250px] text-taccent text-center">15 August 2023</div>
-        <div class="h-[1px] w-full bg-btrim2"></div>
+  <div class="flex flex-col max-h-screen">
+    <div class="basis-3/4 overflow-auto">
+        <div class="flex flex-row items-center">
+            <div class="h-[1px] w-full bg-btrim2"></div>
+            <div class="text-xs w-[250px] text-taccent text-center">15 August 2023</div>
+            <div class="h-[1px] w-full bg-btrim2"></div>
+        </div>
+        <app-message *ngFor="let messageData of messageList" [user]="messageData.user" [time]="messageData.time" [message]="messageData.message"></app-message>
     </div>
-    <app-message [user]="'mtheiley'" [time]="'Today at 21:03'" [message]="'Hello Kelly'"></app-message>
-    <app-message [user]="'kellyzh'" [time]="'Today at 21:03'" [message]="'Hi Matt!'"></app-message>
-    <app-message [user]="'mtheily'" [time]="'Today at 22:02'" [message]="'I can now add messages to my discord clone. They even allow for word wrapping so that
-    they don\'t overflow out of the page. How cool is that?????'"></app-message>
-    <app-message-bar></app-message-bar>
+    <app-message-bar class="basis-1/4"></app-message-bar>
   </div>
 </div>

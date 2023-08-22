@@ -1,12 +1,11 @@
 <div class="flex flex-col justify-between basis-[240px] h-screen bg-bsecondary grow-0 shrink-0 text-tsecondary">
     <div>
       <div class="m-3 flex flex-row w-full justify-between text-tprimary">
-        <div class="">Vi Study</div>
+        <div class="">{{currentServer.name}}</div>
         <div class="mr-6">></div>
       </div>
       <div class="h-[1px] w-full bg-btrim"></div>
-      <app-channel-category [channelName]="'TEXT CHANNELS'"></app-channel-category>
-      <app-channel-category [channelName]="'VOICE CHANNELS'"></app-channel-category>
+      <app-channel-category *ngFor="let category of currentServer.categoryList" [channelName]="category.name"></app-channel-category>
     </div>
     <div class="flex flex-row w-full justify-between bg-btrim">
       <div class="flex flex-row">
